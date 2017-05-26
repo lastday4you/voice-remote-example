@@ -1,0 +1,54 @@
+<head>
+  <title>voice-control</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+</head>
+
+<body>
+  {{#if tutorialEnabled}}
+    {{> tutorial options}}
+  {{/if}}
+  <h1 class="text-center">voice control</h1>
+  <p class="text-center text-info">compaitable with chrome and edge only</p>
+  <div class="text-center">
+    <button class="btn btn-info btn-circle btn-lg" style="margin:10px;" id="help_bt">?</button>
+  </div>
+<div class="list-group">
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">hello</h4>
+    <p class="list-group-item-text">open greeting message</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">tell me a jokes</h4>
+    <p class="list-group-item-text">open message with joke</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">open facebook</h4>
+    <p class="list-group-item-text">open facebook in newtab</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">calculate birth year of ${year}</h4>
+    <p class="list-group-item-text">open message telling you about your age given birth year eg: calcualte birht year of 2001</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">what is sqaure root of ${number}</h4>
+    <p class="list-group-item-text">open message that telling you about the result</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">ok</h4>
+    <p class="list-group-item-text">close the popup message</p>
+  </a>
+    <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">help</h4>
+    <p class="list-group-item-text">a popup tutorial will appear</p>
+  </a>
+</div>
+</body>
+
+<template name="tutorial_step1">
+    Click this button and it will start to record you voice.
+</template>
+
+<template name="tutorial_step2">
+    This is all the command that you can said and it function.
+</template>
